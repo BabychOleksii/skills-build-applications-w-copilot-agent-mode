@@ -1,0 +1,55 @@
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f7ff 0, #ffffff 22rem);
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-link {
+  border-radius: 0.4rem;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+main {
+  max-width: 1140px;
+}
+
+h1 {
+  color: #172554;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+.card,
+.table-responsive {
+  border: 1px solid #dbeafe;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  background-color: #eff6ff;
+  color: #1e3a8a;
+  white-space: nowrap;
+}
+
+.rank {
+  display: inline-block;
+  min-width: 2.8rem;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.workout-card {
+  border-top: 4px solid #22c55e;
+}
