@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
-import { connectDatabase } from '../config/database';
-import { Activity } from '../models/Activity';
-import { Leaderboard } from '../models/Leaderboard';
-import { Team } from '../models/Team';
-import { User } from '../models/User';
-import { Workout } from '../models/Workout';
+import { connectDatabase } from '../config/database.js';
+import { Activity } from '../models/Activity.js';
+import { Leaderboard } from '../models/Leaderboard.js';
+import { Team } from '../models/Team.js';
+import { User } from '../models/User.js';
+import { Workout } from '../models/Workout.js';
 
 /**
  * Seed the octofit_db database with test data
@@ -15,7 +15,6 @@ async function seedDatabase(): Promise<void> {
     console.log('Seed the octofit_db database with test data');
     await connectDatabase();
 
-    // Clear dependent collections first so this script can be safely rerun.
     await Promise.all([
       Activity.deleteMany({}),
       Leaderboard.deleteMany({}),
@@ -25,10 +24,10 @@ async function seedDatabase(): Promise<void> {
     ]);
 
     const users = await User.insertMany([
-      { name: 'Alex Morgan', email: 'alex.morgan@example.com', age: 16 },
-      { name: 'Jordan Lee', email: 'jordan.lee@example.com', age: 17 },
-      { name: 'Priya Shah', email: 'priya.shah@example.com', age: 15 },
-      { name: 'Mateo Garcia', email: 'mateo.garcia@example.com', age: 16 },
+      { name: 'Alex Morgan', email: 'alex.morgan@example.com', age: 29 },
+      { name: 'Jordan Lee', email: 'jordan.lee@example.com', age: 34 },
+      { name: 'Priya Shah', email: 'priya.shah@example.com', age: 27 },
+      { name: 'Mateo Garcia', email: 'mateo.garcia@example.com', age: 31 },
     ]);
 
     const teams = await Team.insertMany([

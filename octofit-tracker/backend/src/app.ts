@@ -1,9 +1,9 @@
 import express, { type ErrorRequestHandler } from 'express';
-import activitiesRouter from './routes/activities';
-import leaderboardRouter from './routes/leaderboard';
-import teamsRouter from './routes/teams';
-import usersRouter from './routes/users';
-import workoutsRouter from './routes/workouts';
+import activitiesRouter from './routes/activities.js';
+import leaderboardRouter from './routes/leaderboard.js';
+import teamsRouter from './routes/teams.js';
+import usersRouter from './routes/users.js';
+import workoutsRouter from './routes/workouts.js';
 
 const app = express();
 
@@ -18,10 +18,6 @@ app.use((_request, response, next) => {
 
 app.get('/', (_request, response) => {
   response.json({ name: 'Octofit Tracker API', status: 'ok' });
-});
-
-app.get('/health', (_request, response) => {
-  response.json({ status: 'ok' });
 });
 
 app.use('/api/users', usersRouter);

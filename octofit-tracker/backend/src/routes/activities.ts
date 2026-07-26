@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { Activity } from '../models/Activity';
+
+import { Activity } from '../models/Activity.js';
 
 const activitiesRouter = Router();
 
